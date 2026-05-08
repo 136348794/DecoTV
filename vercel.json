@@ -1,5 +1,5 @@
 {
-  "functions": {
+  "功能"：{
     "src/app/api/download/proxy/route.ts": {
       "maxDuration": 60
     },
@@ -13,44 +13,48 @@
       "maxDuration": 30
     }
   },
-  "headers": [
+  "页眉": [
     {
-      "source": "/fonts/inter-var-latin.woff2",
-      "headers": [
+      "来源": "/fonts/inter-var-latin.woff2",
+      "页眉": [
         {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
+          "键": "缓存控制",
+          "值": "公共，最大年龄=31536000，不可更改"
         }
       ]
     },
     {
-      "source": "/api/(.*)",
-      "headers": [
+      "来源": "/api/(.*)",
+      "页眉": [
         {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
+          "键": "访问控制允许源",
+          "值": "*"
         },
         {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
+          "键": "访问控制允许方法",
+          "值": "获取、张贴、放置、删除、选项"
         },
         {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
+          "键": "访问控制允许标题",
+          "值": "内容类型，授权"
         }
       ]
     }
   ],
-  "crons": [
+  "老妪": [
     {
-      "path": "/api/cron",
-      "schedule": "0 1 * * *"
+      "路径": "/api/cron",
+      "计划": "0 1 * * *"
     }
   ],
-  "rewrites": [
+  "重写": [
     {
-      "source": "/proxy/:path*",
-      "destination": "/api/proxy/:path*"
+      "来源": "/proxy/：path*",
+      "目标": "/404"
+    },
+    {
+      "来源": "/api/proxy/：path*",
+      "目标": "/404"
     }
   ]
 }
