@@ -49,9 +49,8 @@
     }
   ],
   "rewrites": [
-    { "source": "/proxy/:path*", "destination": "/404" },
-    { "source": "/api/proxy/:path*", "destination": "/404" },
-    { "source": "/API/proxy/:path*", "destination": "/404" },
-    { "source": "/api/proxy/(.*)", "destination": "/404" }
+    { "source": "/proxy(.*)", "destination": "/404" },
+    { "source": "/api/proxy(.*)", "destination": "/404" },
+    { "source": "/API/proxy(.*)", "destination": "/404" }
   ]
 }
