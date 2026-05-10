@@ -1,7 +1,9 @@
+
 {
   "name": "decotv",
   "version": "1.4.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "pnpm gen:manifest && next dev -H 0.0.0.0",
     "build": "pnpm gen:manifest && pnpm copy:version && next build",
